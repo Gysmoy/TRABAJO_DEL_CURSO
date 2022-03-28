@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TRABAJO_DEL_CURSO.Views.AboutPage"
+             xmlns:vm="clr-namespace:TRABAJO_DEL_CURSO.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="bg-header">#273746</Color>
+            <Color x:Key="bg-body">#161b22</Color>
+            <Color x:Key="lbl-primary">#ffffff</Color>
+            <Color x:Key="lbl-secondary">#dddddd</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid BackgroundColor="{StaticResource bg-body}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource bg-header}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <StackLayout>
+                        <Label Text="TO DO LIST" FontSize="42" HorizontalOptions="Center" TextColor="{StaticResource lbl-primary}"/>
+                        <Label Text="Carlos Manuel Gamboa Palomino" HorizontalOptions="Center" TextColor="{StaticResource lbl-secondary}"/>
+                    </StackLayout>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10" >
+                <Label Text="TRABAJO FINAL DEL CURSO" FontSize="Title" TextColor="{StaticResource lbl-primary}" FontAttributes="Bold"/>
+                <Label Text="Diseño y Desarrollo de Aplicaciones Móviles I"
+                    FontSize="16" Padding="0,0,0,0" TextColor="{StaticResource lbl-primary}" FontAttributes="Bold"/>
+                <Label Text="Diseñar y Desarrollar una aplicación móvil multiplataforma con Xamarin"
+                    FontSize="14" Padding="0,0,0,0" TextColor="{StaticResource lbl-secondary}" FontAttributes="Italic"/>
+                <Frame Padding="20" Margin="0,10,0,0" BackgroundColor="{StaticResource bg-header}" CornerRadius="10">
+                    <StackLayout>
+                        <Label Text="Datos Personales del Alumno"
+                               TextColor="{StaticResource lbl-secondary}"
+                               FontSize="16" FontAttributes="Bold"
+                               Margin="0,0,0,10" HorizontalOptions="Center"/>
+                        <Label FontSize="14" Padding="0" TextColor="{StaticResource lbl-secondary}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Código: " FontAttributes="Bold"/>
+                                        <Span Text="1324182"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label FontSize="14" Padding="0" TextColor="{StaticResource lbl-secondary}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Apellidos: " FontAttributes="Bold"/>
+                                        <Span Text="Gamboa Palomino"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label FontSize="14" Padding="0" TextColor="{StaticResource lbl-secondary}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Nombres: " FontAttributes="Bold"/>
+                                        <Span Text="Carlos Manuel"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label FontSize="14" Padding="0" TextColor="{StaticResource lbl-secondary}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Correo: " FontAttributes="Bold"/>
+                                        <Span Text="gamboapalominocarlosmanuel@gmail.com"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label FontSize="14" Padding="0" TextColor="{StaticResource lbl-secondary}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Teléfono: " FontAttributes="Bold"/>
+                                        <Span Text="999413711"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label FontSize="14" Padding="0" TextColor="{StaticResource lbl-secondary}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Sede: " FontAttributes="Bold"/>
+                                        <Span Text="CFP Río Negro"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label FontSize="14" Padding="0" TextColor="{StaticResource lbl-secondary}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Carrera: " FontAttributes="Bold"/>
+                                        <Span Text="Ingeniería de Software con Inteligencia Artificial"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label FontSize="14" Padding="0" TextColor="{StaticResource lbl-secondary}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Semestre: " FontAttributes="Bold"/>
+                                        <Span Text="5to"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+                
+                <Button Margin="0,10,0,0" Text="Ver GitHub"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="{StaticResource lbl-primary}" CornerRadius="5"
+                        HorizontalOptions="Center" VerticalOptions="Center"
+                        Padding="10,5" ImageSource="github.png"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

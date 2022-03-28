@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TRABAJO_DEL_CURSO.Views.ItemDetailPage"
+             Title="{Binding Text}">
+
+    <StackLayout Spacing="10" Padding="30" BackgroundColor="#161b22">
+        <Label Text="Id:" FontSize="Medium" TextColor="#fff">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="ID: " FontAttributes="Bold"/>
+                        <Span Text="{Binding Id}" FontAttributes="Italic" FontSize="Small"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Text="Id:" FontSize="Medium" TextColor="#fff">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="TAREA: " FontAttributes="Bold"/>
+                        <Span Text="{Binding Text}" FontAttributes="Italic" FontSize="Small"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Text="Id:" FontSize="Medium" TextColor="#fff">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="DESCRIPCIÓN: " FontAttributes="Bold"/>
+                        <Span Text="{Binding Description}" FontAttributes="Italic" FontSize="Small"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Text="Id:" FontSize="Medium" TextColor="#fff">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="FECHA: " FontAttributes="Bold"/>
+                        <Span Text="{Binding Date}" FontAttributes="Italic" FontSize="Small"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Text="Id:" FontSize="Medium" TextColor="#fff">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="HORA INICIO: " FontAttributes="Bold"/>
+                        <Span Text="{Binding Start}" FontAttributes="Italic" FontSize="Small"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Text="Id:" FontSize="Medium" TextColor="#fff">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="HORA FIN: " FontAttributes="Bold"/>
+                        <Span Text="{Binding End}" FontAttributes="Italic" FontSize="Small"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+            <Button Text="EDITAR" Command="{Binding OnItemEdit}"
+                     HorizontalOptions="FillAndExpand"
+                    BackgroundColor="{StaticResource Primary}"></Button>
+            <Button Text="ELIMINAR" Command="{Binding DeleteCommand}"
+                     HorizontalOptions="FillAndExpand"
+                     BackgroundColor="#CB4335"></Button>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>
